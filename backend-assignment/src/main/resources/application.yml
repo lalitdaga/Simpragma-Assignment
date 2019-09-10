@@ -1,0 +1,35 @@
+logging:
+  level.org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG
+
+spring:
+  application:
+    name: backend-assignment
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/simpragma_assignment?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: Mummapapa@7
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    database: MYSQL
+    openInView: false
+    show_sql: true
+    generate-ddl: true
+    hibernate:
+      naming-strategy: org.springframework.boot.orm.jpa.hibernate.SpringNamingStrategy
+      generate_statistics: false
+    properties:
+      hibernate.cache.use_second_level_cache: false
+      hibernate.cache.use_query_cache: false
+      hibernate.generate_statistics: false
+      hibernate.jdbc.time_zone: Asia/Kolkata
+
+  resources:
+    chain:
+      enabled: true
+
+management:
+  security:
+    enabled: true
